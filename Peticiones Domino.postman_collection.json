@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "b7e2fb55-deba-4f69-bc23-9478b67558d5",
+		"name": "Peticiones Domino",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"UserId\": 0,\r\n  \"UserName\": \"admin\",\r\n  \"Password\": \"123\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Dominos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJJbnZlbnRvcnlBcGlTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3MjI3NjQ0NC05ZDg5LTQxMDAtYjU1NS0zYTAyOWYzNjU4NzIiLCJpYXQiOiI0LzA1LzIwMjMgNToyMzo0MCBwLsKgbS4iLCJJZCI6IjEiLCJVc2VyTmFtZSI6ImFkbWluIiwiUGFzc3dvcmQiOiIxMjMiLCJleHAiOjE2ODMyMjIyMjAsImlzcyI6IkludmVudG9yeUF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSW52ZW50b3J5QXBpU2VyaWNlUG9zdG1hbkNsaWVudCJ9.JRNOCfS0tGgxs-iopb3rYNwPXZqfTVGf-HVsMJJZhes",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44315/api/Dominoes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Dominoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Dominos Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJJbnZlbnRvcnlBcGlTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3MjI3NjQ0NC05ZDg5LTQxMDAtYjU1NS0zYTAyOWYzNjU4NzIiLCJpYXQiOiI0LzA1LzIwMjMgNToyMzo0MCBwLsKgbS4iLCJJZCI6IjEiLCJVc2VyTmFtZSI6ImFkbWluIiwiUGFzc3dvcmQiOiIxMjMiLCJleHAiOjE2ODMyMjIyMjAsImlzcyI6IkludmVudG9yeUF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSW52ZW50b3J5QXBpU2VyaWNlUG9zdG1hbkNsaWVudCJ9.JRNOCfS0tGgxs-iopb3rYNwPXZqfTVGf-HVsMJJZhes",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44315/api/Dominoes/21",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Dominoes",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Domino",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJJbnZlbnRvcnlBcGlTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3MjI3NjQ0NC05ZDg5LTQxMDAtYjU1NS0zYTAyOWYzNjU4NzIiLCJpYXQiOiI0LzA1LzIwMjMgNToyMzo0MCBwLsKgbS4iLCJJZCI6IjEiLCJVc2VyTmFtZSI6ImFkbWluIiwiUGFzc3dvcmQiOiIxMjMiLCJleHAiOjE2ODMyMjIyMjAsImlzcyI6IkludmVudG9yeUF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSW52ZW50b3J5QXBpU2VyaWNlUG9zdG1hbkNsaWVudCJ9.JRNOCfS0tGgxs-iopb3rYNwPXZqfTVGf-HVsMJJZhes",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"GameId\": 0,\r\n  \"DominoGame\": \"2-1,1-2\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Dominoes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Dominoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Domino",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJJbnZlbnRvcnlBcGlTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3MjI3NjQ0NC05ZDg5LTQxMDAtYjU1NS0zYTAyOWYzNjU4NzIiLCJpYXQiOiI0LzA1LzIwMjMgNToyMzo0MCBwLsKgbS4iLCJJZCI6IjEiLCJVc2VyTmFtZSI6ImFkbWluIiwiUGFzc3dvcmQiOiIxMjMiLCJleHAiOjE2ODMyMjIyMjAsImlzcyI6IkludmVudG9yeUF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSW52ZW50b3J5QXBpU2VyaWNlUG9zdG1hbkNsaWVudCJ9.JRNOCfS0tGgxs-iopb3rYNwPXZqfTVGf-HVsMJJZhes",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"GameId\":22,\r\n  \"DominoGame\":\"2-1,2-3,1-3\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/Dominoes/22",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Dominoes",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Domino",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJJbnZlbnRvcnlBcGlTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI3MjI3NjQ0NC05ZDg5LTQxMDAtYjU1NS0zYTAyOWYzNjU4NzIiLCJpYXQiOiI0LzA1LzIwMjMgNToyMzo0MCBwLsKgbS4iLCJJZCI6IjEiLCJVc2VyTmFtZSI6ImFkbWluIiwiUGFzc3dvcmQiOiIxMjMiLCJleHAiOjE2ODMyMjIyMjAsImlzcyI6IkludmVudG9yeUF1dGhlbnRpY2F0aW9uU2VydmVyIiwiYXVkIjoiSW52ZW50b3J5QXBpU2VyaWNlUG9zdG1hbkNsaWVudCJ9.JRNOCfS0tGgxs-iopb3rYNwPXZqfTVGf-HVsMJJZhes",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44315/api/Dominoes/22",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"Dominoes",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44315/api/UserInfoes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"UserInfoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuarios id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44315/api/UserInfoes/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"UserInfoes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear usuarios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"UserId\": 0,\r\n  \"UserName\": \"admin2\",\r\n  \"Password\": \"1234\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/UserInfoes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"UserInfoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar usuarios",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"UserId\": 2,\r\n  \"UserName\": \"admin3\",\r\n  \"Password\": \"admin3\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44315/api/UserInfoes/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"UserInfoes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar usuarios",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44315/api/UserInfoes/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44315",
+					"path": [
+						"api",
+						"UserInfoes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

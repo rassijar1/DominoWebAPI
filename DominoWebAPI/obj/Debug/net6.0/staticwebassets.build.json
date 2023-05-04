@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "b+JzhlGMCYlMUPOoRLVUuBInjgQgmR/1gVTWuyEhm8k=",
+  "Source": "DominoWebAPI",
+  "BasePath": "_content/DominoWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
